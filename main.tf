@@ -51,5 +51,5 @@ resource "aws_iam_role_policy" "consul" {
 resource "aws_iam_instance_profile" "consul" {
 
   name_prefix = "${var.name}-"
-  role        = "${aws_iam_role.consul.name}"
+  role        = aws_iam_role.consul.name
 }
